@@ -28,6 +28,17 @@
             color: #337ab7;
         }
     </style>
+    <script>
+    window.hdjs={};
+    //组件目录必须绝对路径(在网站根目录时不用设置)
+    window.hdjs.base = '__STATIC__/node_modules/hdjs';
+    //上传文件后台地址
+    window.hdjs.uploader = 'test/php/uploader.php?';
+    //获取文件列表的后台地址
+    window.hdjs.filesLists = 'test/php/filesLists.php?';
+    </script>
+    <script src="__STATIC__/node_modules/hdjs/static/requirejs/require.js"></script>
+    <script src="__STATIC__/node_modules/hdjs/static/requirejs/config.js"></script>
 </head>
 <body>
 <div class="container-fluid admin-top">
@@ -103,7 +114,7 @@
                     </a>
                 </div>
                 <ul class="list-group menus collapse in" id="collapseExample2">
-                    <a href="" class="list-group-item">
+                    <a href="{:url('admin/tag/index')}" class="list-group-item">
                         <i class="fa fa-tags" aria-hidden="true"></i>
                         <span class="pull-right" href=""></span>
                         标签列表
@@ -120,12 +131,12 @@
                     </a>
                 </div>
                 <ul class="list-group menus collapse in" id="collapseExample3">
-                    <a href="" class="list-group-item">
+                    <a href="{:url('admin/article/index')}" class="list-group-item">
                         <i class="fa fa-align-center" aria-hidden="true"></i>
                         <span class="pull-right" href=""></span>
                         文章列表
                     </a>
-                    <a href="" class="list-group-item">
+                    <a href="{:url('admin/article/recycle')}" class="list-group-item">
                         <i class="fa fa-recycle" aria-hidden="true"></i>
                         <span class="pull-right" href=""></span>
                         回收站
@@ -159,7 +170,7 @@
                     </a>
                 </div>
                 <ul class="list-group menus collapse in" id="collapseExample5">
-                    <a href="" class="list-group-item">
+                    <a href="{:url('admin/webset/index')}" class="list-group-item">
                         <i class="fa fa-wrench" aria-hidden="true"></i>
                         <span class="pull-right" href=""></span>
                         网站配置

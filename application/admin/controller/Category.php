@@ -2,6 +2,7 @@
 
 namespace app\admin\controller;
 
+use houdunwang\arr\Arr;
 use think\Controller;
 use think\Request;
 
@@ -21,8 +22,8 @@ class Category extends Controller
      */
     public function index()
     {
-        $filed = db('cate')->select();
-        //$filed = $this->db->getAll();
+        //$filed = db('cate')->select();
+        $filed = $this->db->getAll();
         $this->assign('filed',$filed);
         return $this->fetch();
     }
@@ -74,45 +75,25 @@ class Category extends Controller
      * @param  int  $id
      * @return \think\Response
      */
-    public function edit($cate_id)
+    public function edit()
     {
+        if (request()->isPost()) {
+            //halt($_POST);
+            $res = $this->db->editCate(input('post.'));
+            if ($res['valid']) {
+                $this->success($res['msg'],'index');exit;
+            }else{
+                $this->error($res['msg']);exit;
+            }
+        }
+
+        $cate_id = input('param.cate_id');
+        $oldData = $this->db->find($cate_id);
+        $this->assign('oldData',$oldData);
+        //处理所属数据，不能包含自己和自己的子集数据
+        $cateData = $this->db->getCateData($cate_id);
+        $this->assign('cateData',$cateData);
         return $this->fetch();
-    }
-
-
-    /**
-     * 保存新建的资源
-     *
-     * @param  \think\Request  $request
-     * @return \think\Response
-     */
-    public function save(Request $request)
-    {
-        //
-    }
-
-    /**
-     * 显示指定的资源
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function read($id)
-    {
-        //
-    }
-
-    
-    /**
-     * 保存更新的资源
-     *
-     * @param  \think\Request  $request
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**
@@ -121,8 +102,13 @@ class Category extends Controller
      * @param  int  $id
      * @return \think\Response
      */
-    public function delete($id)
+    public function del()
     {
-        //
+        $res = $this->db->del(input('get.cate_id'));
+        if ($res['valid']) {
+                $this->success($res['msg'],'index');exit;
+            }else{
+                $this->error($res['msg']);exit;
+            }
     }
 }
