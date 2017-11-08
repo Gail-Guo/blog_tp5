@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-07 09:18:23
+-- Generation Time: 2017-11-08 09:34:12
 -- 服务器版本： 5.7.14
 -- PHP Version: 5.6.25
 
@@ -93,10 +93,10 @@ CREATE TABLE `blog_article` (
 --
 
 INSERT INTO `blog_article` (`arc_id`, `arc_title`, `arc_author`, `arc_digest`, `arc_content`, `sendtime`, `updatetime`, `arc_click`, `is_recycle`, `arc_thumb`, `cate_id`, `admin_id`, `arc_sort`) VALUES
-(1, '后盾人在线视频网站上线啦！', '后盾网深水鱼', '好消息！好消息！后盾人在线视频站上线啦！经过多日的熬夜奋战，后盾人以全新的面貌和大家见面啦！', '<p><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);">大家应该也注意到了，我们同行好多也都有自己的视频站，但是目的不纯的占多数（为了融资，博噱头....水太深不能细说），但是我们不一样，我们仅仅是想用心打造一个纯粹的IT技能学习平台，让喜欢技术的朋友轻松受益，在嘈杂的环境中我们只想安静的干点实事。</span><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"><br style="word-wrap: break-word;"/>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 网站已经上线了，但是目前视频课程还没有发布完毕，预计将于本周全面搞定。</span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"><br style="word-wrap: break-word;"/>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 后盾人视频平台上的视频暂时无需注册，无需费用，无广告（这个‘三无’很给力），而且提供高清版打包下载。后盾人视频整理自原来论坛和快学网中发布的视频，在后盾人平台中我们对原来录制的海量视频进行的了筛选和精心分类，让大家更容易找到适合自己的视频进行学习。</span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"><br style="word-wrap: break-word;"/>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 好了不多说了，大家自己去体验吧！<a href="http://www.houdunren.com/" target="_blank" style="word-wrap: break-word; color: rgb(255, 102, 0); text-decoration-line: none;">www.houdunren.com</a></span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</span><img src="http://bbs.houdunwang.com/static/image/smiley/tusiji/15.gif" smilieid="189" border="0" alt="" style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255); width: 41px; height: 46px;" width="41" height="46"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);">动动小手回复一下本帖，就有66个后盾币奖励哦！老铁们别犹豫了！双击666！没毛病！</span><img src="http://bbs.houdunwang.com/static/image/smiley/tusiji/15.gif" smilieid="189" border="0" alt="" style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255); width: 37px; height: 45px;" width="37" height="45"/></p>', 1491989851, 1492175397, 4, 2, 'http://blog.com:8080/uploads/20170412/efa83ed677e33be338d3a3de32b95166.jpg', 3, 0, 100),
-(2, 'HDCMS2.0发布了，让大家久等了。', '后盾向军', '重点是一切都免费，免费使用、免费视频、免费解答。无论是商业用户还是个人用户100%免费！。', '<p><span style="color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; background-color: rgb(255, 255, 255);"><img src="http://blog.com:8080/uploads/20170412/435b900f2e806d7b7f35d10818893e7d.jpg"/></span></p><p><span style="color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; background-color: rgb(255, 255, 255);">后盾网做为业内认真的培训机构，也是唯一拥有开源产品的培训机构，我们始终将技术更新迭代放在第一位。在HDCMS1.0受到众多用户喜欢的基础上，我们开发了HDCMS2.0，拥有更方便的扩展机制，集成微信功能、模块化架构、阿里OSS、微信支付、微信红包、插件机制、自动升级、云模块安装更新....等等前卫的功能。相信会为开发移动/桌面平台应用的中小企业带来福音。</span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="word-wrap: break-word; font-weight: 700; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; background-color: rgb(255, 255, 255);">重点是一切都免费，免费使用、免费视频、免费解答。无论是商业用户还是个人用户100%免费！。</span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; background-color: rgb(255, 255, 255);">无论安装或使用中遇到的问题，后盾团队都会认真帮助大家解决。</span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; background-color: rgb(255, 255, 255);">团队近期会录制HDCMS开发视频教程，敬请期待。</span></p>', 1491989954, 0, 2, 2, 'http://blog.com:8080/uploads/20170412/435b900f2e806d7b7f35d10818893e7d.jpg', 5, 2, 100),
-(3, '后盾网2016羽毛球赛', '后盾武斌', '2016年9月14日，后盾网北京校区举办了秋季羽毛球赛，在校的数百名学员参加了本次活动。大家本着友谊第一，比赛第二的原则，都非常投入，也让自己在紧张的学习中得以放松', '<p><img src="http://blog.com:8080/uploads/20170412/b7f863c8be7ed44ec2f6c94191b906d1.jpg"/></p><p><span style="color: rgb(65, 105, 225); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; font-size: medium; background-color: rgb(255, 255, 255);">2016年9月14日，后盾网北京校区举办了秋季羽毛球赛，在校的数百名学员参加了本次活动。大家本着友谊第一，比赛第二的原则，都非常投入，也让自己在紧张的学习中得以放松</span></p>', 1491990302, 1492155115, 0, 2, 'http://blog.com:8080/uploads/20170412/b7f863c8be7ed44ec2f6c94191b906d1.jpg', 9, 2, 160),
-(4, '后盾网2016中秋佳节长城励志行', '后盾武斌', '2016年9月15日， 值中秋佳节之际，后盾网北京校区组织在校学员和部分毕业学员举行长城游活动。后盾的大部分学员都来自外地，此次来长城，圆了不少同学的梦想，在后盾不仅能学到扎实的技术，还能和大家一起参加集体活动，大家都非常开心和兴奋。一起来回顾一下精彩集锦吧！', '<p><img src="http://blog.com:8080/uploads/20170412/b7f863c8be7ed44ec2f6c94191b906d1.jpg"/></p><p><span style="color: rgb(0, 0, 255); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; font-size: medium; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;2016年9月15日， 值中秋佳节之际，后盾网北京校区组织在校学员和部分毕业学员举行长城游活动。后盾的大部分学员都来自外地，此次来长城，圆了不少同学的梦想，在后盾不仅能学到扎实的技术，还能和大家一起参加集体活动，大家都非常开心和兴奋。一起来回顾一下精彩集锦吧！</span></p><p><br/></p>', 1491990379, 1492174853, 0, 2, 'http://blog.com:8080/uploads/20170412/b7f863c8be7ed44ec2f6c94191b906d1.jpg', 9, 0, 190);
+(1, '不要跳着拿东西', '罗志祥', '我知道那是因为我又想起了妈妈说过的那句话。', '<p><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);">窗外辽阔的视野，远方有绿地、高架道路、好多的人和车子 这真是一间我梦想了好久的房子，我终于买下它，在我租了七年的国宅之后，我终于完成了自己的梦想。\r\n我知道那是我脚踏实地、终于完成的梦想。我很骄傲、很安心，因为那是我用心努力，最后得到的结果。\r\n然后我真的就高兴得掉下眼泪，自己都觉得莫名其妙，但我就那么高兴得哭了起来。\r\n我知道那是因为我又想起了妈妈说过的那句话。</span><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"><br style="word-wrap: break-word;"/>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 网站已经上线了，但是目前视频课程还没有发布完毕，预计将于本周全面搞定。</span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"><br style="word-wrap: break-word;"/>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;哈哈哈哈哈哈哈哈或或或或或或或或或</span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"><br style="word-wrap: break-word;"/>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; hhhhhhhhhh<a href="http://www.houdunren.com/" target="_blank" style="word-wrap: break-word; color: rgb(255, 102, 0); text-decoration-line: none;">www.houdunren.com</a></span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</span><img src="http://bbs.houdunwang.com/static/image/smiley/tusiji/15.gif" smilieid="189" border="0" alt="" style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255); width: 41px; height: 46px;" width="41" height="46"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);">没毛病！</span><img src="http://bbs.houdunwang.com/static/image/smiley/tusiji/15.gif" smilieid="189" border="0" alt="" style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255); width: 37px; height: 45px;" width="37" height="45"/></p>', 1491989851, 1492175397, 4, 2, 'http://blog.com:8080/uploads/20170412/efa83ed677e33be338d3a3de32b95166.jpg', 3, 0, 100),
+(2, '哈哈哈哈哈哈哈哈或或或', '111', '重点是一切都免费，免费使用、免费视频、免费解答。无论是商业用户还是个人用户100%免费！。', '哈哈哈哈哈哈哈哈或或或或或或或或或或', 1491989954, 0, 2, 2, 'http://blog.com:8080/uploads/20170412/435b900f2e806d7b7f35d10818893e7d.jpg', 5, 2, 100),
+(3, '33333', '3333', '33333333333', '333333333333333333', 1491990302, 1492155115, 0, 2, 'http://blog.com:8080/uploads/20170412/b7f863c8be7ed44ec2f6c94191b906d1.jpg', 9, 2, 160),
+(4, '444444444', '444444444', '4444444444', '444444444444', 1491990379, 1492174853, 0, 2, 'http://blog.com:8080/uploads/20170412/b7f863c8be7ed44ec2f6c94191b906d1.jpg', 9, 0, 190);
 
 -- --------------------------------------------------------
 
@@ -147,13 +147,12 @@ CREATE TABLE `blog_cate` (
 --
 
 INSERT INTO `blog_cate` (`cate_id`, `cate_name`, `cate_pid`, `cate_sort`) VALUES
-(15, '子子栏目1', 14, 20),
-(14, '子栏目1', 3, 100),
+(15, '子栏目的子栏目', 14, 20),
+(14, '子栏目1', 0, 100),
 (4, '随便起个名字吧', 0, 200),
-(5, '11', 0, 0),
-(3, '哈哈哈', 0, 20),
 (2, '娱乐', 2, 100),
-(1, '搞笑', 1, 100);
+(1, '搞笑', 1, 100),
+(16, '略略略', 4, 50);
 
 -- --------------------------------------------------------
 
@@ -194,11 +193,11 @@ CREATE TABLE `blog_tag` (
 
 INSERT INTO `blog_tag` (`tag_id`, `tag_name`) VALUES
 (1, '框架'),
-(2, '学习'),
-(3, '视频'),
-(4, 'php'),
+(2, '学习php'),
+(4, 'php和MySQL'),
 (5, 'html'),
-(11, '运动');
+(11, '运动'),
+(12, 'Python');
 
 -- --------------------------------------------------------
 
@@ -218,9 +217,9 @@ CREATE TABLE `blog_webset` (
 --
 
 INSERT INTO `blog_webset` (`webset_id`, `webset_name`, `webset_value`, `webset_des`) VALUES
-(1, 'title', '后盾人 人人做后盾', '网站名称'),
-(2, 'email', 'houdunwang@163.com', '站长邮箱'),
-(3, 'copyright', 'Copyright @ 2017 后盾网', '版权信息');
+(1, 'title', 'PHP是最好的语言', '网站名称'),
+(2, 'email', '1137846153@qq.com', '站长邮箱'),
+(3, 'copyright', 'Copyright @ 2017 ', '版权信息');
 
 --
 -- Indexes for dumped tables
@@ -301,7 +300,7 @@ ALTER TABLE `blog_attachment`
 -- 使用表AUTO_INCREMENT `blog_cate`
 --
 ALTER TABLE `blog_cate`
-  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- 使用表AUTO_INCREMENT `blog_link`
 --
@@ -311,7 +310,7 @@ ALTER TABLE `blog_link`
 -- 使用表AUTO_INCREMENT `blog_tag`
 --
 ALTER TABLE `blog_tag`
-  MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- 使用表AUTO_INCREMENT `blog_webset`
 --
