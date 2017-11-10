@@ -10,7 +10,7 @@ class Login extends Controller
 {
 	public function login()
 	{
-		//echo Crypt::decrypt('admin111');
+		//登录页
 		if (request()->isPost()) {
 			$res = (new Admin())->login(input('post.'));
 			if ($res['valid']) {

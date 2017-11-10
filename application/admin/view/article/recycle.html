@@ -4,15 +4,14 @@
 <ol class="breadcrumb" style="background-color: #f9f9f9;padding:8px 0;margin-bottom:10px;">
     <li>
         <a href=""><i class="fa fa-cogs"></i>
-            文章管理</a>
+            回收站</a>
     </li>
     <li class="active">
-        <a href="">文章添加</a>
+        <a href="">回收站管理</a>
     </li>
 </ol>
 <ul class="nav nav-tabs" role="tablist">
-    <li class="active"><a href="{:url('index')}">文章管理</a></li>
-    <li><a href="{:url('store')}">文章添加</a></li>
+    <li class="active"><a href="#tab1">回收站管理</a></li>
 </ul>
 <form action="" method="post">
     <div class="panel panel-default">
@@ -38,15 +37,15 @@
                         <td>
                             <input type="text" class="form-control" value="{$vo['arc_sort']}">
                         </td>
-                        <td>{$vo['cate_name']}</td>
+                        <td>{$vo['cate_id']}</td>
                         <td>{:date('Y-m-d',$vo['sendtime'])}</td>
                         <td>
                             <div class="btn-group">
                                 <button data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">操作 <span class="caret"></span></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="{:url('admin/article/store',['arc_id'=>$vo['arc_id']])}">编辑</a></li>
+                                    <li><a href="javascript:;" onclick="nodel({$vo['arc_id']})">移除回收站</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="javascript:;" onclick="del({$vo['arc_id']})">删除到回收站</a></li>
+                                    <li><a href="javascript:;" onclick="del({$vo['arc_id']})">彻底删除</a></li>
                                 </ul>
                             </div>
                         </td>
@@ -58,14 +57,23 @@
     </div>
 </form>
 <div class="pagination pagination-sm pull-right">
-	{$field->render()}
+
 </div>
 <script>
+    function nodel(arc_id){
+        require(['hdjs'], function (hdjs) {
+            hdjs.confirm('确定还原至文章列表吗?', function () {
+                //alert('点击确定后执行的回调函数');
+                location.href = "{:url('outRec')}"+'?arc_id='+arc_id;
+            })
+        })
+    }
+
     function del(arc_id){
         require(['hdjs'], function (hdjs) {
-            hdjs.confirm('确定放入回收站吗?', function () {
+            hdjs.confirm('确定彻底删除吗?', function () {
                 //alert('点击确定后执行的回调函数');
-                location.href = "{:url('inRec')}"+'?arc_id='+arc_id;
+                location.href = "{:url('del')}"+'?arc_id='+arc_id;
             })
         })
     }

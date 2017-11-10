@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-08 09:34:12
+-- Generation Time: 2017-11-10 08:10:09
 -- 服务器版本： 5.7.14
 -- PHP Version: 5.6.25
 
@@ -37,9 +37,8 @@ CREATE TABLE `blog_admin` (
 --
 
 INSERT INTO `blog_admin` (`admin_id`, `admin_username`, `admin_password`) VALUES
-(1, 'a', 'a'),
-(2, 'admin', 'h3vPU8JGuF3VS/uxIpjRSw=='),
-(3, 'gail', '0000');
+(1, 'admin', 'admin'),
+(2, 'a', 'a');
 
 -- --------------------------------------------------------
 
@@ -57,14 +56,14 @@ CREATE TABLE `blog_arc_tag` (
 --
 
 INSERT INTO `blog_arc_tag` (`arc_id`, `tag_id`) VALUES
-(1, 2),
-(1, 3),
-(1, 4),
-(1, 5),
-(2, 1),
-(2, 2),
-(3, 11),
-(4, 11);
+(9, 17),
+(10, 17),
+(11, 18),
+(12, 17),
+(11, 17),
+(11, 17),
+(13, 16),
+(13, 17);
 
 -- --------------------------------------------------------
 
@@ -84,7 +83,7 @@ CREATE TABLE `blog_article` (
   `is_recycle` tinyint(4) NOT NULL DEFAULT '2' COMMENT '是否在回收站，1在回收站2代表不在回收站，默认2',
   `arc_thumb` varchar(100) NOT NULL DEFAULT '' COMMENT '文章缩略图',
   `cate_id` int(11) NOT NULL,
-  `admin_id` int(11) NOT NULL,
+  `admin_id` int(11) NOT NULL DEFAULT '3',
   `arc_sort` int(11) NOT NULL DEFAULT '100' COMMENT '文章排序'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='文章表';
 
@@ -93,10 +92,9 @@ CREATE TABLE `blog_article` (
 --
 
 INSERT INTO `blog_article` (`arc_id`, `arc_title`, `arc_author`, `arc_digest`, `arc_content`, `sendtime`, `updatetime`, `arc_click`, `is_recycle`, `arc_thumb`, `cate_id`, `admin_id`, `arc_sort`) VALUES
-(1, '不要跳着拿东西', '罗志祥', '我知道那是因为我又想起了妈妈说过的那句话。', '<p><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);">窗外辽阔的视野，远方有绿地、高架道路、好多的人和车子 这真是一间我梦想了好久的房子，我终于买下它，在我租了七年的国宅之后，我终于完成了自己的梦想。\r\n我知道那是我脚踏实地、终于完成的梦想。我很骄傲、很安心，因为那是我用心努力，最后得到的结果。\r\n然后我真的就高兴得掉下眼泪，自己都觉得莫名其妙，但我就那么高兴得哭了起来。\r\n我知道那是因为我又想起了妈妈说过的那句话。</span><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"><br style="word-wrap: break-word;"/>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 网站已经上线了，但是目前视频课程还没有发布完毕，预计将于本周全面搞定。</span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"><br style="word-wrap: break-word;"/>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;哈哈哈哈哈哈哈哈或或或或或或或或或</span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"><br style="word-wrap: break-word;"/>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; hhhhhhhhhh<a href="http://www.houdunren.com/" target="_blank" style="word-wrap: break-word; color: rgb(255, 102, 0); text-decoration-line: none;">www.houdunren.com</a></span><br style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</span><img src="http://bbs.houdunwang.com/static/image/smiley/tusiji/15.gif" smilieid="189" border="0" alt="" style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255); width: 41px; height: 46px;" width="41" height="46"/><span style="font-size:16px;word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255);">没毛病！</span><img src="http://bbs.houdunwang.com/static/image/smiley/tusiji/15.gif" smilieid="189" border="0" alt="" style="word-wrap: break-word; color: rgb(67, 74, 84); font-family: &quot;Microsoft Yahei&quot;, Simsun, Tahoma; white-space: normal; background-color: rgb(255, 255, 255); width: 37px; height: 45px;" width="37" height="45"/></p>', 1491989851, 1492175397, 4, 2, 'http://blog.com:8080/uploads/20170412/efa83ed677e33be338d3a3de32b95166.jpg', 3, 0, 100),
-(2, '哈哈哈哈哈哈哈哈或或或', '111', '重点是一切都免费，免费使用、免费视频、免费解答。无论是商业用户还是个人用户100%免费！。', '哈哈哈哈哈哈哈哈或或或或或或或或或或', 1491989954, 0, 2, 2, 'http://blog.com:8080/uploads/20170412/435b900f2e806d7b7f35d10818893e7d.jpg', 5, 2, 100),
-(3, '33333', '3333', '33333333333', '333333333333333333', 1491990302, 1492155115, 0, 2, 'http://blog.com:8080/uploads/20170412/b7f863c8be7ed44ec2f6c94191b906d1.jpg', 9, 2, 160),
-(4, '444444444', '444444444', '4444444444', '444444444444', 1491990379, 1492174853, 0, 2, 'http://blog.com:8080/uploads/20170412/b7f863c8be7ed44ec2f6c94191b906d1.jpg', 9, 0, 190);
+(9, '风', 'gail', '风啊风', '<p>大风刮啊</p><p>刮啊刮</p><p>刮啊刮</p><p><br/></p>', 1510276997, 0, 1, 2, 'http://web.blog.com/uploads/20171110\\a8cd176513a50884b5bf8f4366df1669.jpg', 17, 3, 100),
+(11, '在下名叫蓝忘机', 'oh', '蓝忘机', '<p>夷陵老祖魏无羡</p><p><embed type="application/x-shockwave-flash" class="edui-faked-music" pluginspage="http://www.macromedia.com/go/getflashplayer" src="http://box.baidu.com/widget/flash/bdspacesong.swf?from=tiebasongwidget&url=&name=%E3%80%90%E9%AD%94%E9%81%93%E7%A5%96%E5%B8%88%E7%B3%BB%E5%88%97%E3%80%91%E2%80%94%E2%80%94%E8%93%9D%E5%BF%98%E6%9C%BA%26%E9%AD%8F%E6%97%A0%E7%BE%A1%E3%80%8A%E6%9E%95%E6%9C%88%E4%BA%91%E6%B7%B1%E3%80%8B&artist=%E8%AF%97%E9%9B%AA&extra=&autoPlay=false&loop=true" width="400" height="95" align="none" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true"/></p>', 1510278848, 1510287061, 2, 1, 'http://web.blog.com/uploads/20171110\\dbd04e106a685eebaf81d3e795c9979a.jpg', 20, 3, 100),
+(12, '权御天下', '洛天依', '权御天下', '<p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;"><embed type="application/x-shockwave-flash" class="edui-faked-music" pluginspage="http://www.macromedia.com/go/getflashplayer" src="http://box.baidu.com/widget/flash/bdspacesong.swf?from=tiebasongwidget&url=&name=%E6%9D%83%E5%BE%A1%E5%A4%A9%E4%B8%8BFt.%E4%BC%A6%E6%A1%91%20%E8%A3%82%E5%A4%A9%20%E5%B0%8F%E9%AD%82&artist=%E8%90%A7%E5%BF%86%E6%83%85Alex&extra=&autoPlay=false&loop=true" width="400" height="95" align="none" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true"/></p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">东汉末 狼烟不休</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">常侍乱 朝野陷</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">阿瞒挟天子 令诸侯</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">据江东 志在九州</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">继祖业 承父兄</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">既冕主吴越 万兜鍪</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">纵天下 几变春秋</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">稳东南 面中原</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">水师锁长江 抗曹刘</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">镇赤壁雄风赳赳</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">夺荆楚 抚山越</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">驱金戈铁马 灭仇讎</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">紫发髯 碧色眼眸</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">射猛虎 倚黄龙</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">胆识过凡人 谁敌手</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">御天下 半百之久</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">选贤臣 任能将</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">覆江东云雨 尽风流</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">千秋过 再难回首</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">问古今 兴亡事</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">几人耀青史 芳名留</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">笑谈间 云烟已旧</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">终留下 万古叹</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">生子该当如 孙仲谋</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">运帷幄 英雄几拂袖</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">阴谋 阳谋 明仇 暗斗</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">化作一江浊浪东流</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">君不见 军赤壁纵野火铁索连环</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">也不见 御北敌联西蜀长江上鏖战</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">继遗志 领江东</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">屹立于 神州东南</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">尽心力 洒英血</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">展伟业 剑气指苍天</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">军帐内 公瑾智 张昭谋 奇策频献</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">沙场上 太史勇甘宁霸一骑当十千</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">纵使有 千万种</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">寂寞和 孤单相伴</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">既受终 冠帝冕</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">龙椅上 成败也笑看</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">铁瓮城 难攻易守</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">旌旗立 苍空蔽</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">逾百千雄狮 万蒙舟</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">善制衡 眼光独秀</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">擢鲁肃 劝阿蒙</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">聚贤成霸业 名利收</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">固疆土 施德恩厚</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">军心定 百姓安</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">富国又强兵 重耕耨</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">交远好 未雨绸缪</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">联南洋 合林邑</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">行军远渡海 驻夷洲</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">残垣下 枯木凋朽</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">想当年 麦城边</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">截兵缚关羽 终其寿</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">凭栏倚 横看吴钩</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">叹乱世 几时了</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">天下归一统 没其咎</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">称帝王壮心仍稠</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">却无奈 自孤傲</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">同室亦操戈 子嗣斗</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">千年后 恚恨徒留</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">再何寻 军帐里</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">将士聚欢饮 赏箜篌</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">运帷幄 英雄几拂袖</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">阴谋 阳谋 明仇 暗斗</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">化作一江浊浪东流</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">君不见 吕子明 踏轻舟 白衣渡川</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">也不见 陆伯言 烧连营 火光上冲天</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">善制衡 选贤臣 任能将 共谋江山</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">听忠言 摒逆语 树威严 宝剑斫书案</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">夺荆州 抗刘备 合曹操 共克襄樊</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">守夷陵 任陆逊 剿敌军 火计破蜀胆</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">固江河 成帝业 立国家 终归于乱</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">光阴逝 千载过 功成者 都付笑谈间</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">君不见 军赤壁纵野火铁索连环</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">也不见 御北敌联西蜀长江上鏖战</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">继遗志 领江东</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">屹立于 神州东南</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">尽心力 洒英血</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">展伟业 剑气指苍天</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">君不见 吕子明 踏轻舟 白衣渡川</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">也不见 陆伯言 烧连营 火光上冲天</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">善制衡 选贤臣 任能将 共谋江山</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">听忠言 摒逆语 树威严 宝剑斫书案</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">纵使有 千万种 寂寞和 孤单相伴</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">既受终 冠帝冕 龙椅上 成败也笑看</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">固江河 成帝业 立国家 终归于乱</p><p class="f-ust f-ust-1" style="margin-top: 0px; margin-bottom: 16px; padding: 0px; outline: none; user-select: text; cursor: text; line-height: 18px; word-wrap: break-word;">光阴逝 千载过 功成者 都付笑谈间</p><p><br/></p>', 1510283970, 0, 2, 2, 'http://web.blog.com/uploads/20171110\\a6571f5a35929ddcebeed8ee6704c20b.jpg', 19, 3, 100);
 
 -- --------------------------------------------------------
 
@@ -119,15 +117,11 @@ CREATE TABLE `blog_attachment` (
 --
 
 INSERT INTO `blog_attachment` (`id`, `name`, `filename`, `path`, `extension`, `createtime`, `size`) VALUES
-(1, '100.png', '509908fd4b53f4bf124c2c2f09ce6222.png', 'uploads/20170412/509908fd4b53f4bf124c2c2f09ce6222.png', 'png', 1491980109, 13168),
-(2, '100.png', 'c87b1c1d2cc6eb1f804cde8e89372bd2.png', 'uploads/20170412/c87b1c1d2cc6eb1f804cde8e89372bd2.png', 'png', 1491980278, 13168),
-(3, '56451488617429.jpg', 'efa83ed677e33be338d3a3de32b95166.jpg', 'uploads/20170412/efa83ed677e33be338d3a3de32b95166.jpg', 'jpg', 1491981460, 101092),
-(4, 'hdcms.jpg', '435b900f2e806d7b7f35d10818893e7d.jpg', 'uploads/20170412/435b900f2e806d7b7f35d10818893e7d.jpg', 'jpg', 1491981468, 119456),
-(5, 'timg.jpeg', '6c1df3d4d3998c3e5c431fb43f8e7342.jpeg', 'uploads/20170412/6c1df3d4d3998c3e5c431fb43f8e7342.jpeg', 'jpeg', 1491981515, 39375),
-(6, '100.png', '2a0d3034046e162d25696d74eeda6ccd.png', 'uploads/20170412/2a0d3034046e162d25696d74eeda6ccd.png', 'png', 1491985612, 13168),
-(7, '100.png', 'd33f58a6f170eae2ff5dba73fd205a99.png', 'uploads/20170412/d33f58a6f170eae2ff5dba73fd205a99.png', 'png', 1491985645, 13168),
-(8, '100.png', '429c03f9280832f26056cdd6ba6a092d.png', 'uploads/20170412/429c03f9280832f26056cdd6ba6a092d.png', 'png', 1491987688, 13168),
-(9, '47731487768392.jpg', 'b7f863c8be7ed44ec2f6c94191b906d1.jpg', 'uploads/20170412/b7f863c8be7ed44ec2f6c94191b906d1.jpg', 'jpg', 1491990274, 85229);
+(26, 'Lighthouse.jpg', 'a8cd176513a50884b5bf8f4366df1669.jpg', 'uploads/20171110\\a8cd176513a50884b5bf8f4366df1669.jpg', 'jpg', 1510276961, 561276),
+(27, 'Tulips.jpg', 'b2d488c068f5e02701686a010a5c38c2.jpg', 'uploads/20171110\\b2d488c068f5e02701686a010a5c38c2.jpg', 'jpg', 1510277034, 620888),
+(28, '1.jpg', 'f1f48dd592aea9708b0afd0ebf730ea2.jpg', 'uploads/20171110\\f1f48dd592aea9708b0afd0ebf730ea2.jpg', 'jpg', 1510278793, 55144),
+(29, '4.jpg', 'a6571f5a35929ddcebeed8ee6704c20b.jpg', 'uploads/20171110\\a6571f5a35929ddcebeed8ee6704c20b.jpg', 'jpg', 1510283564, 58090),
+(30, '3.jpg', 'dbd04e106a685eebaf81d3e795c9979a.jpg', 'uploads/20171110\\dbd04e106a685eebaf81d3e795c9979a.jpg', 'jpg', 1510284055, 24804);
 
 -- --------------------------------------------------------
 
@@ -147,12 +141,9 @@ CREATE TABLE `blog_cate` (
 --
 
 INSERT INTO `blog_cate` (`cate_id`, `cate_name`, `cate_pid`, `cate_sort`) VALUES
-(15, '子栏目的子栏目', 14, 20),
-(14, '子栏目1', 0, 100),
-(4, '随便起个名字吧', 0, 200),
-(2, '娱乐', 2, 100),
-(1, '搞笑', 1, 100),
-(16, '略略略', 4, 50);
+(17, '日常', 0, 100),
+(19, '上午', 17, 1),
+(20, '下午', 17, 1);
 
 -- --------------------------------------------------------
 
@@ -172,9 +163,8 @@ CREATE TABLE `blog_link` (
 --
 
 INSERT INTO `blog_link` (`link_id`, `link_name`, `link_url`, `link_sort`) VALUES
-(1, '后盾网', 'http://www.houdunwang.com', 100),
-(2, '后盾论坛', 'http://bbs.houdunwang.com/portal.php', 100),
-(3, '后盾人视频站', 'http://www.houdunren.com', 100);
+(8, 'Google', 'http://www.google.com', 20),
+(9, 'Coursera', 'https://www.coursera.org/', 50);
 
 -- --------------------------------------------------------
 
@@ -192,12 +182,10 @@ CREATE TABLE `blog_tag` (
 --
 
 INSERT INTO `blog_tag` (`tag_id`, `tag_name`) VALUES
-(1, '框架'),
-(2, '学习php'),
-(4, 'php和MySQL'),
-(5, 'html'),
-(11, '运动'),
-(12, 'Python');
+(14, 'PHP'),
+(16, 'Python'),
+(17, 'weather'),
+(18, '蓝忘机');
 
 -- --------------------------------------------------------
 
@@ -217,9 +205,9 @@ CREATE TABLE `blog_webset` (
 --
 
 INSERT INTO `blog_webset` (`webset_id`, `webset_name`, `webset_value`, `webset_des`) VALUES
-(1, 'title', 'PHP是最好的语言', '网站名称'),
-(2, 'email', '1137846153@qq.com', '站长邮箱'),
-(3, 'copyright', 'Copyright @ 2017 ', '版权信息');
+(1, 'title', '我的博客', '网站名称'),
+(2, 'email', '1137846153@qq.com', '邮箱'),
+(3, 'copyright', 'Copyright @ 2017', '版权信息');
 
 --
 -- Indexes for dumped tables
@@ -290,32 +278,32 @@ ALTER TABLE `blog_admin`
 -- 使用表AUTO_INCREMENT `blog_article`
 --
 ALTER TABLE `blog_article`
-  MODIFY `arc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `arc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- 使用表AUTO_INCREMENT `blog_attachment`
 --
 ALTER TABLE `blog_attachment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- 使用表AUTO_INCREMENT `blog_cate`
 --
 ALTER TABLE `blog_cate`
-  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- 使用表AUTO_INCREMENT `blog_link`
 --
 ALTER TABLE `blog_link`
-  MODIFY `link_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `link_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- 使用表AUTO_INCREMENT `blog_tag`
 --
 ALTER TABLE `blog_tag`
-  MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- 使用表AUTO_INCREMENT `blog_webset`
 --
 ALTER TABLE `blog_webset`
-  MODIFY `webset_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `webset_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

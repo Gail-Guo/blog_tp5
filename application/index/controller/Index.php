@@ -6,7 +6,7 @@ class Index extends Common
 {
     public function index()
     {
-		$headConf = ['title'=>'后盾教学博客--首页'];
+		$headConf = ['title'=>'我的博客--首页'];
 		$this->assign('headConf',$headConf);
 		//获取文章数据
 		$articleData = db('article')->alias('a')

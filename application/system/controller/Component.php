@@ -16,6 +16,7 @@ class Component extends Controller
 		$file = request()->file( 'file' );
 		// 移动到框架应用根目录/public/uploads/ 目录下
 		$info = $file->move( ROOT_PATH . 'public' . DS . 'uploads' );
+
 		if ( $info ) {
 			$data = [
 				'name'       => input( 'post.name' ) ,
@@ -23,10 +24,12 @@ class Component extends Controller
 				'path'       => 'uploads/' . $info->getSaveName() ,
 				'extension'  => $info->getExtension() ,
 				'createtime' => time() ,
-				'size'       => $info->getSize() ,
+				'size'       => $info->getSize() 
 			];
+		
 			Db::name( 'attachment' )->insert( $data );
-			echo json_encode( [ 'valid' => 1 , 'message' => HD_ROOT . 'uploads/' . $info->getSaveName() ] );
+			//ajax( [ 'valid' => 1 , 'message' => $file[0]['path'] ]);
+			echo json_encode( [ 'valid' => 1 , 'message' => P_ROOT . 'uploads/' . $info->getSaveName() ] );
 		}
 		else {
 			// 上传失败获取错误信息
@@ -37,16 +40,16 @@ class Component extends Controller
 	//获取文件列表
 	public function filesLists ()
 	{
-		$db   = Db::name( 'attachment' )->whereIn( 'extension' , explode( ',' , strtolower( input( "post.extensions" ) ) ) )->order( 'id desc' );
-		$Res  = $db->paginate( 32 );
+		$db   = Db::name( 'attachment' )->whereIn( 'extension' , explode( ',' , strtolower(input( "post.extensions" ))))->order( 'id desc' );
+		$Res  = $db->paginate(5);
 		$data = [];
 		if ( $Res->toArray() ) {
-			//dump($Res->toArray());die;
+
 			foreach ( $Res as $k => $v ) {
 				$data[ $k ][ 'createtime' ] = date( 'Y/m/d' , $v[ 'createtime' ] );
 				$data[ $k ][ 'size' ]       = $v[ 'size' ];
-				$data[ $k ][ 'url' ]        = HD_ROOT . $v[ 'path' ];
-				$data[ $k ][ 'path' ]       = HD_ROOT . $v[ 'path' ];
+				$data[ $k ][ 'url' ]        = P_ROOT . $v[ 'path' ];
+				$data[ $k ][ 'path' ]       = P_ROOT . $v[ 'path' ];
 				$data[ $k ][ 'name' ]       = $v[ 'name' ];
 			}
 		}

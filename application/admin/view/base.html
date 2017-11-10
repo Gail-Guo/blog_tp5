@@ -32,10 +32,12 @@
     window.hdjs={};
     //组件目录必须绝对路径(在网站根目录时不用设置)
     window.hdjs.base = '__STATIC__/node_modules/hdjs';
+
     //上传文件后台地址
-    window.hdjs.uploader = 'test/php/uploader.php?';
+    window.hdjs.uploader = "{:url('system/component/uploader')}";
+
     //获取文件列表的后台地址
-    window.hdjs.filesLists = 'test/php/filesLists.php?';
+    window.hdjs.filesLists = "{:url('system/component/filesLists')}?";
     </script>
     <script src="__STATIC__/node_modules/hdjs/static/requirejs/require.js"></script>
     <script src="__STATIC__/node_modules/hdjs/static/requirejs/config.js"></script>
@@ -46,7 +48,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <h4 style="display: inline;line-height: 50px;float: left;margin: 0px"><a href="index.html" style="color: white;margin-left: -14px">博客网</a>
+                <h4 style="display: inline;line-height: 50px;float: left;margin: 0px"><a href="{:url('admin/entry/index')}" style="color: white;margin-left: -14px">博客网</a>
                 </h4>
                 <div class="navbar-header">
                     <ul class="nav navbar-nav">
@@ -55,12 +57,13 @@
                                 在线文档</a>
                         </li>
                         <li>
+                            <a href="http://www.thinkphp.cn/" target="_blank"><i class="fa fa-w fa-forumbee"></i> ThinkPHP</a>
+                        </li>
+                        <li>
                             <a href="http://www.bootcss.com/" target="_blank"><i
                                     class="fa fa-w fa-hand-o-right"></i> Bootstrap</a>
                         </li>
-                        <li>
-                            <a href="http://www.imooc.com" target="_blank"><i class="fa fa-w fa-forumbee"></i> 慕课网</a>
-                        </li>
+                        
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
@@ -153,10 +156,10 @@
                     </a>
                 </div>
                 <ul class="list-group menus collapse in" id="collapseExample4">
-                    <a href="" class="list-group-item">
+                    <a href="{:url('admin/link/index')}" class="list-group-item">
                         <i class="fa fa-link" aria-hidden="true"></i>
                         <span class="pull-right" href=""></span>
-                        友情链接首页
+                        友情链接列表
                     </a>
                 </ul>
                 <!--链接管理菜单 end-->

@@ -5,70 +5,77 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Request;
 
-
-//标签
-class Tag extends Controller
+/**
+ * 友情链接列表控制器
+ */
+class Link extends Controller
 {
-
     protected $db;
     protected function _initialize()
     {
         parent::_initialize();
-        $this->db = new \app\common\model\Tag();
+        $this->db = new \app\common\model\Link();
     }
 
+
     /**
-     * 显示资源列表
-     *
-     * @return \think\Response
+     * 列表页
      */
+
     public function index()
     {
-        $field = db('tag')->paginate(3);
+        $field = db('link')->select();
         $this->assign('field',$field);
         return $this->fetch();
     }
+
+
     /**
-     * 保存新建的资源
-     *
-     * @param  \think\Request  $request
-     * @return \think\Response
+     * 添加
      */
-    public function store()
+
+    public function add()
     {
-        //halt($_POST);
-        $tag_id = input('param.tag_id');
-       
         if (request()->isPost()) {
-            $res = $this->db->store(input('post.'));
+            $res = $this->db->add(input('post.'));
             if ($res['valid']) {
                 $this->success($res['msg'],'index');exit;
             }else{
                 $this->error($res['msg']);exit;
             }
         }
-       if($tag_id)
-        {
-            //说明是编辑请求
-            $oldData = $this->db->find($tag_id);
-
-        }else{
-            //添加
-            $oldData = ['tag_name'=>''];
-        }
-        $this->assign('oldData',$oldData);
         return $this->fetch();
     }
 
+
     /**
-     * 删除指定资源
-     *
-     * @param  int  $id
-     * @return \think\Response
+     * 编辑资源表
+     */
+
+    public function edit()
+    {
+        $link_id = input('param.link_id');
+        $oldData = $this->db->where('link_id',$link_id)->find();
+        $this->assign('oldData',$oldData);
+
+        if (request()->isPost()) {
+            $res = $this->db->edit(input('post.'),$link_id);
+            if ($res['valid']) {
+                $this->success($res['msg'],'index');exit;
+            }else{
+                $this->error($res['msg']);exit;
+            }
+        }
+        return $this->fetch();
+    }
+
+
+    /**
+     * 删除
      */
     public function del()
     {
-        $res = $this->db->del(input('get.tag_id'));
+        $res = $this->db->del(input('get.link_id'));
         if ($res['valid']) {
                 $this->success($res['msg'],'index');exit;
             }else{

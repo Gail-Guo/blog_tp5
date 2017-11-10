@@ -5,7 +5,9 @@ namespace app\admin\controller;
 use houdunwang\arr\Arr;
 use think\Controller;
 use think\Request;
-
+/**
+ * 栏目列表控制器
+ */
 
 class Category extends Controller
 {
@@ -15,11 +17,13 @@ class Category extends Controller
         parent::_initialize();
         $this->db = new \app\common\model\Category();
     }
+
+
     /**
-     * 显示资源列表
+     * 栏目列表页
      *
-     * @return \think\Response
      */
+
     public function index()
     {
         //$filed = db('cate')->select();
@@ -28,11 +32,11 @@ class Category extends Controller
         return $this->fetch();
     }
 
+
     /**
-     * 显示创建资源表单页.
-     *
-     * @return \think\Response
+     * 添加栏目
      */
+
     public function add()
     {
         if (request()->isPost()) {
@@ -46,10 +50,9 @@ class Category extends Controller
         return $this->fetch();
     }
 
+
     /**
      * 添加子集
-     *
-     * @return \think\Response
      */
     public function addSon()
     {
@@ -70,15 +73,12 @@ class Category extends Controller
 
 
     /**
-     * 显示编辑资源表单页.
-     *
-     * @param  int  $id
-     * @return \think\Response
+     * 编辑
      */
+
     public function edit()
     {
         if (request()->isPost()) {
-            //halt($_POST);
             $res = $this->db->editCate(input('post.'));
             if ($res['valid']) {
                 $this->success($res['msg'],'index');exit;
@@ -96,11 +96,9 @@ class Category extends Controller
         return $this->fetch();
     }
 
+
     /**
      * 删除指定资源
-     *
-     * @param  int  $id
-     * @return \think\Response
      */
     public function del()
     {

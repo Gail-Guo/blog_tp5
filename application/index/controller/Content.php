@@ -14,7 +14,7 @@ class Content extends Common
 		//文章点击次数+1
 		db('article')->where('arc_id',$arc_id)->setInc('arc_click');
 		$articleData = db('article')->field('arc_id,arc_title,arc_author,arc_content,sendtime')->find($arc_id);
-		$headConf = ['title'=>"后盾教学博客--{$articleData['arc_title']}"];
+		$headConf = ['title'=>"我的博客--{$articleData['arc_title']}"];
 		$this->assign('headConf',$headConf);
 //		dump($articleData);
 		//当前文章标签

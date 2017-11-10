@@ -2,7 +2,7 @@
 namespace app\admin\validate;
 use think\Validate;
 /** 
-* 栏目验证规则
+* 标签验证规则
 */
 class Tag extends Validate
 {

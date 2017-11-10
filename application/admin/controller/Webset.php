@@ -26,15 +26,4 @@ class Webset extends Controller
         return $this->fetch();
     }
 
-    
-    /**
-     * 显示编辑资源表单页.
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 }

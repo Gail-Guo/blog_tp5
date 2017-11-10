@@ -10,7 +10,7 @@ class Lists extends Common
     //首页
 	public function index()
 	{
-		$headConf = ['title'=>'后盾教学博客--列表页'];
+		$headConf = ['title'=>'我的博客--列表页'];
 		$this->assign('headConf',$headConf);
 		//获取左侧第一部分数据
 		$cate_id = input('param.cate_id');

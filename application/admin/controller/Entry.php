@@ -4,6 +4,9 @@ namespace app\admin\controller;
 use think\Controller;
 use app\common\model\Admin;
 
+/**
+ * 后台主页控制器
+ */
 class Entry extends Common
 {
 	//首页
