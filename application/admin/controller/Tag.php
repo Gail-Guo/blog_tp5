@@ -70,9 +70,9 @@ class Tag extends Controller
     {
         $res = $this->db->del(input('get.tag_id'));
         if ($res['valid']) {
-                $this->success($res['msg'],'index');exit;
-            }else{
-                $this->error($res['msg']);exit;
-            }
+            $this->success($res['msg'],'index');exit;
+        }else{
+            $this->error($res['msg']);exit;
+        }
     }
 }

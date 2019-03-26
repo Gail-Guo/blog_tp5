@@ -104,9 +104,9 @@ class Category extends Controller
     {
         $res = $this->db->del(input('get.cate_id'));
         if ($res['valid']) {
-                $this->success($res['msg'],'index');exit;
-            }else{
-                $this->error($res['msg']);exit;
-            }
+            $this->success($res['msg'],'index');exit;
+        }else{
+            $this->error($res['msg']);exit;
+        }
     }
 }

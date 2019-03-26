@@ -17,6 +17,5 @@ class Category extends Validate
 		'cate_sort.require' => '请输入栏目顺序',
 		'cate_sort.number' => '排序必须为数字',
 		'cate_sort.between' => '排序必须在1到9999之间'
-
 	];
 }

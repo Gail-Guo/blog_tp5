@@ -77,9 +77,9 @@ class Link extends Controller
     {
         $res = $this->db->del(input('get.link_id'));
         if ($res['valid']) {
-                $this->success($res['msg'],'index');exit;
-            }else{
-                $this->error($res['msg']);exit;
-            }
+            $this->success($res['msg'],'index');exit;
+        }else{
+            $this->error($res['msg']);exit;
+        }
     }
 }

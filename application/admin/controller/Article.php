@@ -61,13 +61,14 @@ class Article extends Controller
             $oldTag = db('arc_tag')->find($arc_id);
         }else{
             //添加
-            $oldData = ['arc_title'=>'',
-                        'arc_author'=>'',
-                        'arc_sort'=>'',
-                        'cate_id'=>'',
-                        'arc_digest'=>'',
-                        'arc_content'=>''
-                    ];
+            $oldData = [
+                'arc_title'=>'',
+                'arc_author'=>'',
+                'arc_sort'=>'',
+                'cate_id'=>'',
+                'arc_digest'=>'',
+                'arc_content'=>''
+            ];
             $oldTag = ['tag_id' => ''];
         }
         $this->assign('oldTag',$oldTag);
@@ -93,10 +94,10 @@ class Article extends Controller
     {
         $res = $this->db->inRec(input('get.arc_id'));
         if ($res['valid']) {
-                $this->success($res['msg'],'index');exit;
-            }else{
-                $this->error($res['msg']);exit;
-            }
+            $this->success($res['msg'],'index');exit;
+        }else{
+            $this->error($res['msg']);exit;
+        }
     }
 
 
@@ -108,10 +109,10 @@ class Article extends Controller
     {
         $res = $this->db->outRec(input('get.arc_id'));
         if ($res['valid']) {
-                $this->success($res['msg'],'index');exit;
-            }else{
-                $this->error($res['msg']);exit;
-            }
+            $this->success($res['msg'],'index');exit;
+        }else{
+            $this->error($res['msg']);exit;
+        }
     }
 
 
@@ -135,10 +136,10 @@ class Article extends Controller
     {
         $res = $this->db->del(input('get.arc_id'));
         if ($res['valid']) {
-                $this->success($res['msg'],'recycle');exit;
-            }else{
-                $this->error($res['msg']);exit;
-            }
+            $this->success($res['msg'],'recycle');exit;
+        }else{
+            $this->error($res['msg']);exit;
+        }
     }
 
 }

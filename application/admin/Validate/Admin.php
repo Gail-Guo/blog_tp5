@@ -17,6 +17,5 @@ class Admin extends Validate
 		'admin_password.require' => '请输入密码',
 		'code.require' => '请输入验证码',
 		'code.captcha' => '验证码不正确'
-
 	];
 }
